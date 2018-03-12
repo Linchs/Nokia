@@ -1,0 +1,25 @@
+data=[{
+	"title": "Exec",
+	"email": "test",
+	"awareness": ["FB", "LI", "TT"],
+	"consideration": ["test", "source"],
+	"action": "text",
+}, {
+	"title": "Exec",
+	"email": "test",
+	"awareness": ["fb", "li", "tt"],
+	"consideration": ["test", "source"],
+	"Action": "text"
+},{
+	"title": "ITDM",
+	"email": "test",
+	"awareness": ["FB", "LI", "TT"],
+	"consideration": ["test", "source"],
+	"Action": "text",
+}, {
+	"title": "Exec",
+	"email": "test",
+	"awareness": ["fb", "li", "tt"],
+	"consideration": ["test", "source"],
+	"Action": "text"
+}];
