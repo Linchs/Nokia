@@ -10,8 +10,11 @@ body-font {
    font-size:10px;
 }
 
-/*home*/
-.homeLink{padding:50px;  color:#124191; font-size:12px;}
+/*home
+a:link {padding:50px;  color:#124191; font-size:12px;}
+a:hover{color:red}
+*/
+
 /*Left Panel*/
 .dd{min-width:95%; padding:5px; border:1px solid #DCDCDC;  border-radius:4px; color:#124191;}
 .source{padding:4px; background-color:#d1d1e0; border-radius:4px; margin:2px;}
