@@ -71,27 +71,27 @@
 					<!--label style="color:#124191;">Campaign</label><br/-->
 					<select class="dd">
 					  <option value="4">Select Campaign</option>
-					  <option value="1">Campaign 1</option>
-					  <option value="2">Campaign 2</option>
-					  <option value="3">Campaign 3</option>				  
+					  <option value="1">XLE</option>
+					  <!--option value="2">Campaign 2</option>
+					  <option value="3">Campaign 3</option-->				  
 					</select>
 				</div>
 				<div class="form-group">
 					<!--label style="color:#124191;">Subcampaign</label-->
 					<select class="dd" >
 					  <option value="4">Select Subcampaign</option>
-					  <option value="1">Subcampaign 1</option>
-					  <option value="2">Subcampaign 2</option>
-					  <option value="3">Subcampaign 3</option>				  
+					  <option value="1">Gamechanger</option>
+					  <!--option value="2">Subcampaign 2</option>
+					  <option value="3">Subcampaign 3</option-->				  
 					</select>
 				</div>
 				<div class="form-group">
 					<!--label style="color:#124191;">Solution</label><br/-->
 					<select class="dd" >
 					  <option value="4">Select Solution</option>
-					  <option value="1">Solution 1</option>
-					  <option value="2">Solution 2</option>
-					  <option value="3">Solution 3</option>				  
+					  <option value="1">Enterprise Cloud</option>
+					  <!--option value="2">Solution 2</option>
+					  <option value="3">Solution 3</option-->				  
 					</select>
 				</div>	
 				<div class="form-group">
@@ -103,11 +103,12 @@
 			<!-- Accounts start-->
 			<div ng-show="acnts" style="width:100%;  margin-top:10px;">
 				<ul class="list-group">
-				  <li class="list-group-item"><a href="#">Dapibus ac facilisis in</a></li>
-				  <li class="list-group-item"><a href="#"  ng-click="showContacts()" ng-class="linkClass">PayPal</a></li>
-				  <li class="list-group-item"><a href="#">Morbi leo risus</a></li>
-				  <li class="list-group-item"><a href="#">Porta ac consectetur ac</a></li>
-				  <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+				  
+				  <li class="list-group-item"><a href="#"  ng-click="showContacts()" ng-class="linkClass">Autodesk.com</a></li>
+				  <li class="list-group-item"><a href="#">Bank of America</a></li>
+				  <li class="list-group-item"><a href="#">PayPal</a></li>
+				  <li class="list-group-item"><a href="#">United Airlines</a></li>
+				  <li class="list-group-item"><a href="#">Wells Fargo</a></li>
 				</ul>
 				<!--div style="color:#124191; font-weight:bold; border-bottom:2px solid #fff; padding:5px">Accounts</div>
 				<div class="acnt-divider">Dapibus ac facilisis in</div>					
@@ -121,7 +122,8 @@
 		<div style="float:left; width:80%;">
 			<!--journey placeholder start-->
 			<div ng-show="jPlaceholder" style="padding:5% 25%;">
-				<table border="0" cellspacing="0" and cellpadding="0" style="width:100%; color:#124191;" class="body-font">
+					
+				<table border="0" cellspacing="0" and cellpadding="0" style="width:100%; color:#124191;" class="body-font ">
 					<tr>
 						<td style="width:10%"></td>
 						<td style="width:30%" class="journey-heading">Awareness</td>
@@ -162,7 +164,7 @@
 			<div ng-show="contactsDT" style="margin-top:2%; align:top; padding: 0 3%;">	
 				<h4 style="color:navy">Account Name : PayPal</h4>
 				<!-- contacts table start-->
-				<table class="table table-striped table-bordered body-font" style="font-size:12px;" ng-controller="jsonCtrl">
+				<table border="1" class="table table-striped table-bordered body-font" style="font-size:12px;" ng-controller="jsonCtrl">
 					<thead>
 					<tr style="background-color:#e6f2ff;">
 						<th scope="col">Title</th>
@@ -176,46 +178,57 @@
 					
 					<tr class="hdr">
 						<td colspan="5" style="background-color:#fff; color:#124191" >
-							<span class="glyphicon glyphicon-chevron-right" id="exec"> </span> <b>Executives</b></td>
+							<span class="glyphicon glyphicon-chevron-down" id="exec"> </span> <b>Executives</b></td>
 					</tr> 
-					<tr ng-repeat="contact in contacts"> 
-						<td>{{ contact.title }}</td>
-						<td>{{ contact.email }}</td>
+					<tr ng-repeat="contact in exec"> 		
+						<td>{{ contact.Title }}</td>
+						<td>{{ contact.Email }}</td>
+						<td> <span ng-repeat="awareness in contact.awareness" style="border:1px solid #fff; font-size:12px;" class="source">
+							{{ awareness }}</span>
+						</td>
+						<td><span ng-repeat="consideration in contact.consideration" style="border:1px solid #fff; font-size:12px;" class="source">
+							{{ consideration }}</span></td>							
+						<td><span ng-repeat="action in contact.Action" style="border:1px solid #fff; font-size:12px;" class="source">
+							{{ action }}</span></td>																
+					</tr>   
+					
+					<tr class="hdr">
+						<td colspan="5" style="background-color:#fff; color:#124191">
+							<span class="glyphicon glyphicon-chevron-down" id="itdm"> </span> <b>IT Decision Maker</b></b>
+						</td>
+					</tr>
+					<tr ng-repeat="contact in itdm"> 		
+						<td>{{ contact.Title }}</td>
+						<td>{{ contact.Email }}</td>
 						<td> <span ng-repeat="awareness in contact.awareness" style="border:1px solid #fff; font-size:12px;" class="source">
 							{{ awareness }}</span>
 						</td>
 						<td><span ng-repeat="consideration in contact.consideration" style="border:1px solid #fff; font-size:12px;" class="source">
 							{{ consideration }}</span></td>
-						<td></td>						
-					</tr>   
+							
+						<td><span ng-repeat="action in contact.Action" style="border:1px solid #fff; font-size:12px;" class="source">
+							{{ action }}</span></td>										
+					</tr> 
 					
 					<tr class="hdr">
 						<td colspan="5" style="background-color:#fff; color:#124191">
-							<span class="glyphicon glyphicon-chevron-right" id="itdm"> </span> ITDM</b>
+							<span class="glyphicon glyphicon-chevron-down" id="itdm"> </span><b>Influencer</b>
 						</td>
 					</tr>
-					<tr scope="row" ng-repeat="contact in contacts" style="background-color:;">
-						<td>{{ contact.title }}</td>
-						<td>{{ contact.email }}</td>
-						<td><span ng-repeat="awareness in contact.awareness" style="border:1px solid #fff; font-size:12px;" class="source">
+					<tr ng-repeat="contact in infl"> 		
+						<td>{{ contact.Title }}</td>
+						<td>{{ contact.Email }}</td>
+						<td> <span ng-repeat="awareness in contact.awareness" style="border:1px solid #fff; font-size:12px;" class="source">
 							{{ awareness }}</span>
 						</td>
 						<td><span ng-repeat="consideration in contact.consideration" style="border:1px solid #fff; font-size:12px;" class="source">
 							{{ consideration }}</span></td>
-						<td></td>						
-					</tr> 
-					<tr class="hdr">
-						<td colspan="5" style="background-color:#fff; color:#124191"><span class="glyphicon glyphicon-chevron-right" id="inf"> </span> <b>Influencer</b></td></tr>
-					<tr scope="row" ng-repeat="contact in contacts" style="background-color:;">
-						<td>Influencer<!--{{ contact.title }}--></td>
-						<td><!--{{ contact.email }}--></td>
-						<td><span ng-repeat="awareness in contact.awareness" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ awareness }}</span>
-						</td>
-						<td><span ng-repeat="consideration in contact.consideration" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ consideration }}</span></td>
-						<td></td>						
-					</tr>   					
+							
+						<td><span ng-repeat="action in contact.Action" style="border:1px solid #fff; font-size:12px;" class="source">
+							{{ action }}</span></td>
+																
+					</tr>   
+							
 				</tbody>
 				</table>
 				<!-- contacts table end-->
@@ -229,7 +242,7 @@
 		//alert ($(this).find("span").attr("id"));
 		selTitle=$(this).find("span").attr("id");
 		
-		$(this).find("span").toggleClass("glyphicon-chevron-up glyphicon-chevron-down");
+		$(this).find("span").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
 		$(this).nextUntil('tr.hdr').slideToggle(100);
 	});
 	</script>
