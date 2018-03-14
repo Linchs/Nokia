@@ -1,25 +1,276 @@
-data=[{
-	"title": "Exec",
-	"email": "test",
-	"awareness": ["FB", "LI", "TT"],
-	"consideration": ["test", "source"],
-	"action": "text",
-}, {
-	"title": "Exec",
-	"email": "test",
-	"awareness": ["fb", "li", "tt"],
-	"consideration": ["test", "source"],
-	"Action": "text"
-},{
-	"title": "ITDM",
-	"email": "test",
-	"awareness": ["FB", "LI", "TT"],
-	"consideration": ["test", "source"],
-	"Action": "text",
-}, {
-	"title": "Exec",
-	"email": "test",
-	"awareness": ["fb", "li", "tt"],
-	"consideration": ["test", "source"],
-	"Action": "text"
-}];
+data=[
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "bb.king@autodesk.com",
+
+		"Title": "Executive",
+
+		"awareness": [],
+
+		"consideration": ["Email", "Linkedin"],
+
+		"Action": ["MQL", "OPP", "SAL"]
+
+	},
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "buddy.guy@autodesk.com",
+
+		"Title": "IT Decision Maker",
+
+		"awareness": [],
+
+		"consideration": ["Email"],
+
+		"Action": []
+
+	},
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "duane.allman@autodesk.com",
+
+		"Title": "Influencer",
+
+		"awareness": ["LinkedIn"],
+
+		"consideration": [],
+
+		"Action": []
+
+	},
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "eric.clapton@autodesk.com",
+
+		"Title": "Influencer",
+
+		"awareness": [" Content Syndication "],
+
+		"consideration": [],
+
+		"Action": []
+
+	},
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "george.harrison@autodesk.com",
+
+		"Title": "Influencer",
+
+		"awareness": [" Content Syndication "],
+
+		"consideration": [],
+
+		"Action": []
+
+	},
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "jerry.garcia@autodesk.com",
+
+		"Title": "Influencer",
+
+		"awareness": [],
+
+		"consideration": ["Email"],
+
+		"Action": []
+
+	},
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "jimi.hendrix@autodesk.com",
+
+		"Title": "IT Decision Maker",
+
+		"awareness":[" LinkedIn "],
+
+		"consideration": [" Email "],
+
+		"Action": [" MQL "]
+
+
+
+	},
+
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "jimmy.page@autodesk.com",
+
+		"Title": "Influencer",
+
+		"awareness": [" Content Syndication ", "Email", "Facebook"],
+
+		"consideration": [" LinkedIn "],
+
+		"Action": [" MQL "]
+
+
+
+	},
+
+
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "junior.kimbrough@autodesk.com",
+
+		"Title": "IT Decision Maker",
+
+		"awareness": [],
+
+		"consideration": [" Email "],
+
+		"Action":[" MQL "]
+
+	},
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "keith.richards@autodesk.com",
+
+		"Title": "IT Decision Maker",
+
+		"awareness": [" Content Syndication "],
+
+		"consideration":[],
+
+		"Action": []
+
+
+
+	},
+
+	{
+
+		"Campaign": "XLE",
+
+		"Subcampaign": "Gamechanger",
+
+		"SSID": "17-GEPS-XLE-C0004O",
+
+		"Solution": "Enterprise Cloud",
+
+		"Account": "autodesk.com",
+
+		"Email": "kurt.cobain@autodesk.com",
+
+		"Title": "Influencer",
+
+		"awareness": [" Content Syndication "],
+
+		"consideration": [],
+
+		"Action": []
+
+	}
+
+]
