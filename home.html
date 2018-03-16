@@ -63,8 +63,8 @@
 	</div>
 	</header>
 	<!-- Begin page content -->
-	<div ng-controller="searchCntrl">
-		<div style="float:left; min-width:20%; background-color:#efefef; padding:10px; height:100vh;" >			
+	<div ng-controller="searchCntrl" style="width:100%; height:100%; overflow: hidden; background-color:#efefef; ">
+		<div style="float:left; min-width:20%; padding:10px;" >			
 			<!-- search start-->
 			<div style="background-color:#fff; padding:15px 5px 1px 15px; width:100%; border-radius:5px;">				
 				<div class="form-group">
@@ -119,7 +119,7 @@
 			</div>		
 			<!--Accounts end-->
 		</div>
-		<div style="float:left; width:80%;">
+		<div style="float:left; width:80%; min-height:88vh; background-color:#fff;">
 			<!--journey placeholder start-->
 			<div ng-show="jPlaceholder" style="padding:5% 25%;">
 					
