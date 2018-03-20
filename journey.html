@@ -104,7 +104,7 @@
 			<div ng-show="acnts" style="width:100%;  margin-top:10px;">
 				<ul class="list-group">
 				  
-				  <li class="list-group-item"><a href="#"  ng-click="showContacts()" ng-class="linkClass">Autodesk.com</a></li>
+				  <li class="list-group-item"><a href="#"  ng-click="showContacts()" ng-class="linkClass">GE Healthcare</a></li>
 				  <li class="list-group-item"><a href="#">Bank of America</a></li>
 				  <li class="list-group-item"><a href="#">PayPal</a></li>
 				  <li class="list-group-item"><a href="#">United Airlines</a></li>
@@ -162,28 +162,38 @@
 			</div>
 			
 			<div ng-show="contactsDT" style="margin-top:2%; align:top; padding: 0 3%;">	
-				<h4 style="color:navy">Account Name : Autodesk.com</h4>
+				<h4 style="color:navy">Account Name : GE Healthcare</h4>
 				
 				<table border="0" class="table table-striped table-bordered body-font" style="font-size:12px;" ng-controller="jsonCtrl">
 					<thead>
 					<tr style="background-color:#e6f2ff;">
-						<th scope="col">Domain Name</th>
-					    <th scope="col">Country</th>
-					    <th scope="col">Industry</th>
-					    <th scope="col">Segment</th>
-					    <th scope="col">Revenue</th>
-						<th scope="col">Number of Employees</th>
+						<th style="vertical-align:top;">URL</th>
+					    <th style="vertical-align:top;">Company<br/></th>
+					    <th scope="col">Top Level Industry</th>
+					    <th style="vertical-align:top;">Sub Level Industry</th>
+					    <th scope="col">HQ Country</th>
+						<th scope="col">Revenue ($B)</th>						
+						<th scope="col">IT Budget  ($M)</th>
+						<th scope="col">Employee Count</th>
+						<th scope="col">IT Employee Count</th>
+						<th scope="col">ITDM Count</th>
+						<th scope="col">Number of Locations</th>
 					</tr>				
 					</thead>
 					<tbody>					
 					
 					<tr style="background-color:#fff;">
-						<td>AUTODESK.COM</td>
-						<td >United States of America</td>
-						<td>Software</td>
-						<td >Enterprise</td>
-						<td>$2.03 B</td>
-						<td >10,000</td>
+						<td>gehealthcare.com</td>
+						<td >GE Healthcare</td>
+						<td>Manufacturing</td>
+						<td >Medical Devices & Equipment</td>
+						<td>United States</td>
+						<td >17.64</td>						
+						<td >790.43</td>
+						<td>42,500.00</td>
+						<td >1,000.00</td>
+						<td>379.00</td>
+						<td >260.00</td>
 					</tr> 
 				</table>
 				
@@ -196,7 +206,8 @@
 					<tbody>				
 					
 					<tr class="hdr">
-						<td style="background-color:#fff;">Open Stack, Kubernetes, Docker</td>
+						<td style="background-color:#fff;">GE Healthcare, Docker Container, Kubernetes Container, Mesosphere Container, RedHat OpenShift Container, RedHat Ent Linux, RedHat Ent Virtualization, Canonical Ubuntu, AWS Container Svc, Azure Container Svc
+						</td>
 					</tr> 
 				</table>
 				
