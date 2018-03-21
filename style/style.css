@@ -25,11 +25,23 @@ a:hover{color:red}
 .notActive  {font-weigth:normal;}
 /*journey placeholder*/
 .journey-heading{font-size:14px; text-align:center}
-.aware{background-color:#d8e9f3; border-right:1px solid #fff; text-align:center}
-.consider{background-color:#b2d3e6; border:1px solid #fff; text-align:center}
-.action{background-color:#8dbdd8; border:1px solid #fff; text-align:center}
+.aware{background-color:#d8e9f3; border-right:1px solid #fff; text-align:center; font-weight:bold; font-size:14px;}
+.consider{background-color:#b2d3e6; border:1px solid #fff; text-align:center ;font-weight:bold; font-size:14px;}
+.action{background-color:#8dbdd8; border:1px solid #fff; text-align:center; font-weight:bold; font-size:14px;}
 
 tr.hdr
 {
     cursor:pointer;
 }
+
+
+
+.tooltip.right .tooltip-inner {
+    background-color:#124191;
+	text-align:left;
+	padding:9px;
+  }
+.tooltip.right .tooltip-arrow {
+          border-right-color: #124191;
+       }
+
