@@ -16,9 +16,9 @@ data=[
 
 		"Title": "Executive",
 
-		"awareness": [],
+		"awareness": ["Linkedin"],
 
-		"consideration": ["Email", "Linkedin"],
+		"consideration": ["Email"],
 
 		"Action": ["MQL", "OPP", "SAL"]
 
@@ -187,9 +187,9 @@ data=[
 
 		"Title": "Influencer",
 
-		"awareness": [" Content Syndication ", "Email", "Facebook"],
+		"awareness": [" Content Syndication ", "Linkedin", "Facebook"],
 
-		"consideration": [" LinkedIn "],
+		"consideration": ["Email"],
 
 		"Action": [" MQL "]
 
