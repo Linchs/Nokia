@@ -8,24 +8,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="style/style.css" rel="stylesheet" type="text/css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--script data-require="angular.js@1.0.x" src="http://code.angularjs.org/1.0.7/angular.min.js" data-semver="1.0.7"></script>
- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="js/ng-grid.min.js"></script-->
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
-
-<script type="text/javascript" src="data.json"></script>
-<script type="text/javascript" src="js/controller.js"></script>
 <title>Discover: Home</title>
 
+<style>
+	.hmLinkContainer{float:left; width:45%; padding:50px 0;   margin-bottom:20px; height:auto; }
+	.hmLinkContainerBcg{background-image:url(img/lBcg.png); background-repeat:no-repeat; background-size:100% 100%;}
+	.hmLinkHoverBcg{background-color:#124191; border-radius:8px;}
+</style>
+
 </head>
-<body ng-app="contactsApp">
+<body>
 	<header>
 	<div class="container-fluid">
 		<div class="pull-left" style="padding-top:8px; width:15%;"><img src="img/nokiaLogo.png" width="80%"/></div>
@@ -35,272 +31,63 @@
 
 	<ul class="nav nav-pills pull-right" style="margin-top:-10px;margin-right:-10px;">
 		<li role="presentation" class="dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-
-				<div style="width:200px; padding-top:3px; text-align:right;">
-				<span style="font-size:10px; color:#383838;"" class="glyphicon glyphicon-home"></span>
-				<span><a href="home.html" style="font-size:11px; text-decoration:none; color:#383838;"">Home</a> &nbsp;&nbsp;
-				<span style="font-size:10px;" class="glyphicon glyphicon-user"></span>
-				<span style="font-size:11px;">Welcome <span id="welcome-user-name">Kumar Ram</span> </span>
-				<span class="caret"></span>
-			</div>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" >
+				<div style="width:150px; padding-top:3px; text-align:right;">
+					<span style="font-size:10px; color:#383838;"" class="glyphicon glyphicon-user"></span>
+					<span style="font-size:11px; color:#383838;">Welcome <span id="welcome-user-name">Kumar Ram</span> </span>
+					<span class="caret" style="color:#383838;"></span>
+				</div>				
 			</a>
 			<ul class="dropdown-menu pull-right">
 			<li class="dropdown-submenu left-submenu" style="text-align: right;position:relative;">
-
 			<a href="#" class="dropdown-toggle rightalign-submenu" data-toggle="dropdown" style="width: 100%;">
-
 			<i class="fa fa-caret-left" aria-hidden="true"></i> Connected to: [prodrs]</a>
 			</li>
 			</ul>
 		</li>
 	</ul>
 	</div>
-	
 	<div class="topNavBar">
 	<div class="container-fluid" style="display: block; background-color:#124191">
-	<div class="center title bold" style="color:#fff; text-align:center; font-size:13px; padding:8px; letter-spacing: 1px;">Journey</span></div>
+	<div class="center title bold" style="color:#fff; text-align:center; font-size:13px; padding:8px; letter-spacing: 1px;"><!--Create New Report/Segment--></span></div>
 	</div>
 	</div>
 	</header>
 	<!-- Begin page content -->
-	<div ng-controller="searchCntrl" style="width:100%; height:100%; overflow: hidden; background-color:#efefef; ">
-		<div style="float:left; min-width:20%; padding:10px;" >			
-			<!-- search start-->
-			<div style="background-color:#fff; padding:15px 5px 1px 15px; width:100%; border-radius:5px;">				
-				<div class="form-group">
-					<!--label style="color:#124191;">Campaign</label><br/-->
-					<select class="dd">
-					  <option value="4">Select Campaign</option>
-					  <option value="1">XLE</option>
-					  <!--option value="2">Campaign 2</option>
-					  <option value="3">Campaign 3</option-->				  
-					</select>
-				</div>
-				<div class="form-group">
-					<!--label style="color:#124191;">Subcampaign</label-->
-					<select class="dd" >
-					  <option value="4">Select Subcampaign</option>
-					  <option value="1">Gamechanger</option>
-					  <!--option value="2">Subcampaign 2</option>
-					  <option value="3">Subcampaign 3</option-->				  
-					</select>
-				</div>
-				<div class="form-group">
-					<!--label style="color:#124191;">Solution</label><br/-->
-					<select class="dd" >
-					  <option value="4">Select Solution</option>
-					  <option value="1">Enterprise Cloud</option>
-					  <!--option value="2">Solution 2</option>
-					  <option value="3">Solution 3</option-->				  
-					</select>
-				</div>	
-				<div class="form-group">
-					<button type="button" ng-click="searchBtn()" class="btn btn-primary" style="background-color:#124191; border:1px solid #fff;">Search</button>  <button type="button" class="btn">Clear</button>
-				</div>
-			</div>		
-			<!-- search end-->
-			
-			<!-- Accounts start-->
-			<div ng-show="acnts" style="width:100%;  margin-top:10px;">
-				<ul class="list-group">
-				  
-				  <li class="list-group-item"><a href="#"  ng-click="showContacts()" ng-class="linkClass">GE Healthcare</a></li>
-				  <li class="list-group-item"><a href="#">Bank of America</a></li>
-				  <li class="list-group-item"><a href="#">PayPal</a></li>
-				  <li class="list-group-item"><a href="#">United Airlines</a></li>
-				  <li class="list-group-item"><a href="#">Wells Fargo</a></li>
-				</ul>
-				<!--div style="color:#124191; font-weight:bold; border-bottom:2px solid #fff; padding:5px">Accounts</div>
-				<div class="acnt-divider">Dapibus ac facilisis in</div>					
-				<div style="color:navy;" class="acnt-divider"><b>Paypal</b></div>						
-				<div class="acnt-divider">Morbi leo risus</div>
-				<div class="acnt-divider">Porta ac consectetur ac</div>
-				<div class="acnt-divider">Vestibulum at eros</div-->					
-			</div>		
-			<!--Accounts end-->
-		</div>
-		<div style="float:left; width:80%; min-height:88vh; background-color:#fff;">
-		
-			<!--journey placeholder start-->
-			<div ng-show="jPlaceholder" style="padding:5% 25%;">
-
-
-
-			
-				<table border="0" cellspacing="0" and cellpadding="0" style="width:100%; color:#124191;" class="body-font ">
-					<tr>
-						<td style="width:10%"></td>
-						<td style="width:30%" class="journey-heading">Awareness</td>
-						<td style="width:30%" class="journey-heading">Consideration</td>
-						<td style="width:30%" class="journey-heading">Action</td>
-					</tr>
-					<tr>
-						<td style="height:80px; text-align:right">Executive&nbsp;&nbsp; </td>
-						<td class="aware"><a class="exAw">1</a></td>
-						<td class="aware"><a class="exC">1</a></td>
-						<td class="aware"><a class="exAc">3</a></td>
-					</tr>
-					<tr><td style="height:80px; text-align:right;">ITDM&nbsp;&nbsp; </td>
-						<td class="consider"><a class="itdmAw">2</a></td>
-						<td class="consider"><a class="itdmC">3</a></td>
-						<td class="consider"><a class="itdmAc">2</a></td>
-					</tr>
-					<tr><td style="height:80px; text-align:right;">Influencer&nbsp;&nbsp; </td>
-						<td class="action"><a class="infAw">7</a></td>
-						<td class="action"><a class="infC">2</a></td>
-						<td class="action"><a class="infAc">1</a></td>
-					</tr>
-				</table>				
-			<!-- journey placeholder-->
+		<div style="width:40%;  margin-left:30%;  margin-right:30%; padding-top:2%; text-align:center;">
+			<div>
+				<div class="hmLinkContainer hmLinkContainerBcg"> <a href="http://localhost:8085/discover-1.1/installedBase" target="_blank" class="hmLink" id="prospect">Prospect & Customer<br>[33,060] Accounts*</a></div>
+				<div style="float:left; width:5%;">&nbsp;</div>
+				<div class="hmLinkContainer hmLinkContainerBcg"><a href="http://localhost:8085/discover-1.1/competitiveInstallBase" target="_blank" class="hmLink" id="comp">Competitor Installed Base<br>[33,060] Accounts*</a></div>
+			</div>			
+			<div style="border:1px solid blue; heigth:auto; background-color:black; margin-top:-150px;">
+				<div class="hmLinkContainer hmLinkContainerBcg"> <a href="http://localhost:8085/discover-1.1/intentBase" target="_blank" class="hmLink" id="surg">Surging Interest<br>[77,866] Domains*</a></div>
+				<div style="float:left; width:5%;">&nbsp;</div>
+				<div class="hmLinkContainer hmLinkContainerBcg"><a href="http://localhost:8085/discover-1.1/contacts" target="_blank" class="hmLink" id="records">Marketo Records<br>[358,216] Persons*</a></div>
 			</div>
-			
-			<div ng-show="contactsDT" style="margin-top:2%; align:top; padding: 0 3%;">	
-				<h4 style="color:navy">Account Name : GE Healthcare</h4>
-				
-				<table border="0" class="table table-striped table-bordered body-font" style="font-size:12px;" ng-controller="jsonCtrl">
-					<thead>
-					<tr style="background-color:#e6f2ff;">
-						<th style="vertical-align:top;">URL</th>
-					    <th style="vertical-align:top;">Company<br/></th>
-					    <th scope="col">Top Level Industry</th>
-					    <th style="vertical-align:top;">Sub Level Industry</th>
-					    <th scope="col">HQ Country</th>
-						<th scope="col">Revenue ($B)</th>						
-						<th scope="col">IT Budget  ($M)</th>
-						<th scope="col">Employee Count</th>
-						<th scope="col">IT Employee Count</th>
-						<th scope="col">ITDM Count</th>
-						<th scope="col">Number of Locations</th>
-					</tr>				
-					</thead>
-					<tbody>					
+			<div>
+				<div class="hmLinkContainer hmLinkContainerBcg"> <a href="journey.html"class="hmLink"id="journey">Journey</a><br/>&nbsp;</div>
+				<div style="float:left; width:5%;">&nbsp;</div>
+				<div class="hmLinkContainer hmLinkContainerBcg"> 
+					<!--a class="hmLink" target="_blank" id="reports" href="https://app.powerbi.com/groups/fbd9bfc5-1a31-4fea-93e3-0d334bf3e4b6/reports/06b275d6-0e8f-490b-8bce-05c823a53f32/ReportSection"-->
+					<a href="https://app.powerbi.com/groups/me/apps/11112cb0-e8ec-4ef7-92b2-1c8db48a007a/reports/06b275d6-0e8f-490b-8bce-05c823a53f32/ReportSection8bc1640bee30a3fee428?ctid=5d471751-9675-428d-917b-70f44f9630b0" target="_blank" class="hmLink"id="reports">Marketo Reports</a>
 					
-					<tr style="background-color:#fff;">
-						<td>gehealthcare.com</td>
-						<td >GE Healthcare</td>
-						<td>Manufacturing</td>
-						<td >Medical Devices & Equipment</td>
-						<td>United States</td>
-						<td >17.64</td>						
-						<td >790.43</td>
-						<td>42,500.00</td>
-						<td >1,000.00</td>
-						<td>379.00</td>
-						<td >260.00</td>
-					</tr> 
-				</table>
-				
-				<table border="0" class="table table-striped table-bordered body-font" style="font-size:12px;" ng-controller="jsonCtrl">
-					<thead>
-					<tr style="background-color:#e6f2ff;">
-						<th>Install Base (Technologies)</th>					    
-					</tr>				
-					</thead>
-					<tbody>				
-					
-					<tr class="hdr">
-						<td style="background-color:#fff;">GE Healthcare, Docker Container, Kubernetes Container, Mesosphere Container, RedHat OpenShift Container, RedHat Ent Linux, RedHat Ent Virtualization, Canonical Ubuntu, AWS Container Svc, Azure Container Svc
-						</td>
-					</tr> 
-				</table>
-				
-				<!-- contacts table start-->
-				<table border="1" class="table table-striped table-bordered body-font" style="font-size:12px;" ng-controller="jsonCtrl">
-					<thead>
-					<tr style="background-color:#e6f2ff;">
-						<th scope="col">Title</th>
-					    <th scope="col">Email</th>
-					    <th scope="col">Awareness</th>
-					    <th scope="col">Consideration</th>
-					    <th scope="col">Action</th>
-					</tr>				
-					</thead>
-					<tbody>					
-					
-					<tr class="hdr">
-						<td colspan="5" style="background-color:#fff; color:#124191" >
-							<span class="glyphicon glyphicon-chevron-down" id="exec"> </span> <b>Executives (1)</b></td>
-					</tr> 
-					<tr ng-repeat="contact in exec"> 		
-						<td>{{ contact.Title }}</td>
-						<td>{{ contact.Email }}</td>
-						<td> <span ng-repeat="awareness in contact.awareness" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ awareness }}</span>
-						</td>
-						<td><span ng-repeat="consideration in contact.consideration" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ consideration }}</span></td>							
-						<td><span ng-repeat="action in contact.Action" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ action }}</span></td>																
-					</tr>   
-					
-					<tr class="hdr">
-						<td colspan="5" style="background-color:#fff; color:#124191">
-							<span class="glyphicon glyphicon-chevron-down" id="itdm"> </span> <b>IT Decision Maker (4)</b></b>
-						</td>
-					</tr>
-					<tr ng-repeat="contact in itdm"> 		
-						<td>{{ contact.Title }}</td>
-						<td>{{ contact.Email }}</td>
-						<td> <span ng-repeat="awareness in contact.awareness" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ awareness }}</span>
-						</td>
-						<td><span ng-repeat="consideration in contact.consideration" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ consideration }}</span></td>
-							
-						<td><span ng-repeat="action in contact.Action" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ action }}</span></td>										
-					</tr> 
-					
-					<tr class="hdr">
-						<td colspan="5" style="background-color:#fff; color:#124191">
-							<span class="glyphicon glyphicon-chevron-down" id="itdm"> </span><b>Influencer (6)</b>
-						</td>
-					</tr>
-					<tr ng-repeat="contact in infl"> 		
-						<td>{{ contact.Title }}</td>
-						<td>{{ contact.Email }}</td>
-						<td> <span ng-repeat="awareness in contact.awareness" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ awareness }}</span>
-						</td>
-						<td><span ng-repeat="consideration in contact.consideration" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ consideration }}</span></td>
-							
-						<td><span ng-repeat="action in contact.Action" style="border:1px solid #fff; font-size:12px;" class="source">
-							{{ action }}</span></td>
-																
-					</tr>   
-							
-				</tbody>
-				</table>
-				<!-- contacts table end-->
-			</div>
-			
+					<br/>&nbsp;</div>
+				<div style="float:left; width:5%;">&nbsp;</div>
+			</div>	
+
 		</div>
-	<!-- End page content -->
-	
 	<script>
-	$(document).ready(function(){
-		 $('.exAw').tooltip({title:"Email : 1", html: true, placement: "right"}); 
-		 $('.exC').tooltip({title:"Email : 1", html: true, placement: "right"}); 
-		 $('.exAc').tooltip({title:"MQL : 1 <br/>OPP : 1 <br/> SAL : 1", html: true, placement: "right"}); 
-		 
-		 $('.itdmAw').tooltip({title: "Content Syndication : 1 <Br/>LinkedIn : 1", html: true, placement: "right"}); 
-		 $('.itdmC').tooltip({title: "Email : 3", html: true, placement: "right"}); 
-		 $('.itdmAc').tooltip({title: "MQL : 2", html: true, placement: "right"}); 		 
-		 
-		 $('.infAw').tooltip({title: "Content Syndication : 4<br/>Facebook : 1<br/>LinkedIn : 2 ", html: true, placement: "right"}); 
-		 $('.infC').tooltip({title: "Email : 2", html: true, placement: "right"}); 
-		 $('.infAc').tooltip({title: "MQL : 1", html: true, placement: "right"}); 
-	});
-
-	$('.hdr').click(function(){
-		//alert ($(this).find("span").attr("id"));
-		selTitle=$(this).find("span").attr("id");
-		
-		$(this).find("span").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
-		$(this).nextUntil('tr.hdr').slideToggle(100);
-	});
+		$(".hmLink").on("mouseover", function(event){
+		id="#"+this.id;
+		//alert(id);
+			$(id).css({"text-decoration":"none", "color":"white"});
+			$(id).parent().removeClass('hmLinkContainerBcg').addClass('hmLinkHoverBcg');
+		});
+		$(".hmLink").on("mouseout", function(event){
+			$(".hmLink").css({"text-decoration":"none", "color":"#124191"});
+			$(".hmLink").parent().removeClass('hmLinkHoverBcg').addClass('hmLinkContainerBcg');
+		});	
 	</script>
 </body>
 </html>
