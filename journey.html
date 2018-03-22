@@ -56,6 +56,7 @@
 		</li>
 	</ul>
 	</div>
+	
 	<div class="topNavBar">
 	<div class="container-fluid" style="display: block; background-color:#124191">
 	<div class="center title bold" style="color:#fff; text-align:center; font-size:13px; padding:8px; letter-spacing: 1px;">Journey</span></div>
@@ -120,9 +121,13 @@
 			<!--Accounts end-->
 		</div>
 		<div style="float:left; width:80%; min-height:88vh; background-color:#fff;">
+		
 			<!--journey placeholder start-->
 			<div ng-show="jPlaceholder" style="padding:5% 25%;">
-					
+
+
+
+			
 				<table border="0" cellspacing="0" and cellpadding="0" style="width:100%; color:#124191;" class="body-font ">
 					<tr>
 						<td style="width:10%"></td>
@@ -132,30 +137,19 @@
 					</tr>
 					<tr>
 						<td style="height:80px; text-align:right">Executive&nbsp;&nbsp; </td>
-						<td class="aware"><span class="glyphicon glyphicon-file"></span</td>
-						<td class="aware"><span class="glyphicon glyphicon-file"></span>&nbsp;<span class="glyphicon glyphicon-file"></span>
-						</td><td class="aware"></td>
+						<td class="aware"><a class="exAw">1</a></td>
+						<td class="aware"><a class="exC">1</a></td>
+						<td class="aware"><a class="exAc">3</a></td>
 					</tr>
 					<tr><td style="height:80px; text-align:right;">ITDM&nbsp;&nbsp; </td>
-						<td class="consider">
-							<span class="glyphicon glyphicon-align-justify"></span>
-							
-						</td>
-						<td class="consider">
-							<span class="glyphicon glyphicon-modal-window"></span>&nbsp;<span class="glyphicon glyphicon-file"></span>
-						</td>
-						<td class="consider">
-							<span class="glyphicon glyphicon-tasks"></span>
-						</td>
+						<td class="consider"><a class="itdmAw">2</a></td>
+						<td class="consider"><a class="itdmC">3</a></td>
+						<td class="consider"><a class="itdmAc">2</a></td>
 					</tr>
 					<tr><td style="height:80px; text-align:right;">Influencer&nbsp;&nbsp; </td>
-						<td class="action">
-							<span class="glyphicon glyphicon-file"></span>
-						</td>
-						<td class="action">
-							<span class="glyphicon glyphicon-file"></span>&nbsp;<span class="glyphicon glyphicon-align-justify"></span>
-						</td>
-						<td class="action"></td>
+						<td class="action"><a class="infAw">7</a></td>
+						<td class="action"><a class="infC">2</a></td>
+						<td class="action"><a class="infAc">1</a></td>
 					</tr>
 				</table>				
 			<!-- journey placeholder-->
@@ -226,7 +220,7 @@
 					
 					<tr class="hdr">
 						<td colspan="5" style="background-color:#fff; color:#124191" >
-							<span class="glyphicon glyphicon-chevron-down" id="exec"> </span> <b>Executives</b></td>
+							<span class="glyphicon glyphicon-chevron-down" id="exec"> </span> <b>Executives (1)</b></td>
 					</tr> 
 					<tr ng-repeat="contact in exec"> 		
 						<td>{{ contact.Title }}</td>
@@ -242,7 +236,7 @@
 					
 					<tr class="hdr">
 						<td colspan="5" style="background-color:#fff; color:#124191">
-							<span class="glyphicon glyphicon-chevron-down" id="itdm"> </span> <b>IT Decision Maker</b></b>
+							<span class="glyphicon glyphicon-chevron-down" id="itdm"> </span> <b>IT Decision Maker (4)</b></b>
 						</td>
 					</tr>
 					<tr ng-repeat="contact in itdm"> 		
@@ -260,7 +254,7 @@
 					
 					<tr class="hdr">
 						<td colspan="5" style="background-color:#fff; color:#124191">
-							<span class="glyphicon glyphicon-chevron-down" id="itdm"> </span><b>Influencer</b>
+							<span class="glyphicon glyphicon-chevron-down" id="itdm"> </span><b>Influencer (6)</b>
 						</td>
 					</tr>
 					<tr ng-repeat="contact in infl"> 		
@@ -286,6 +280,19 @@
 	<!-- End page content -->
 	
 	<script>
+	$(document).ready(function(){
+		 $('.exAw').tooltip({title:"Email : 1", html: true, placement: "right"}); 
+		 $('.exC').tooltip({title:"Email : 1", html: true, placement: "right"}); 
+		 $('.exAc').tooltip({title:"MQL : 1 <br/>OPP : 1 <br/> SAL : 1", html: true, placement: "right"}); 
+		 
+		 $('.itdmAw').tooltip({title: "Content Syndication : 1 <Br/>LinkedIn : 1", html: true, placement: "right"}); 
+		 $('.itdmC').tooltip({title: "Email : 3", html: true, placement: "right"}); 
+		 $('.itdmAc').tooltip({title: "MQL : 2", html: true, placement: "right"}); 		 
+		 
+		 $('.infAw').tooltip({title: "Content Syndication : 4<br/>Facebook : 1<br/>LinkedIn : 2 ", html: true, placement: "right"}); 
+		 $('.infC').tooltip({title: "Email : 2", html: true, placement: "right"}); 
+		 $('.infAc').tooltip({title: "MQL : 1", html: true, placement: "right"}); 
+	});
 	$('.hdr').click(function(){
 		//alert ($(this).find("span").attr("id"));
 		selTitle=$(this).find("span").attr("id");
