@@ -20,7 +20,7 @@ data=[
 
 		"consideration": ["Email"],
 
-		"Action": ["MQL", "OPP", "SAL"]
+		"Action": ["MQL", "SAL","OPP"]
 
 	},
 
